@@ -203,7 +203,11 @@ int main(int argc,char *argv[])
 	/*initialize the confusion and location/activity co-ocurerence matrix*/
 	//initMatrix(0.2);
 
-	if(argv[5][0]=='c') initMatrixFile(argv[5]); else initMatrix(atof(argv[5]));
+	if(atoi(argv[5][0])==0){
+		initMatrix(atof(argv[5]));
+	}else{
+		initMatrixFile(argv[5]);
+	}
 	/*print confusion matrix*/
 	for (int i=0;i<numActivities;i++){
 		for (int j=0;j<numActivities;j++)

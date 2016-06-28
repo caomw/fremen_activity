@@ -10,7 +10,7 @@ set format x ""
 set ylabel "Weak classifier \n \n Error rate [%]" offset 1.2,0.0
 numdays = 13.9
 max = 79.5 
-min = 40 
+min = 30 
 set title 'Aruba dataset' 
 plot [0:numdays] [min:max] \
 '../results/aruba/fremen_0_20.txt' using (100-$5*100) lw 2 with lines notitle,\

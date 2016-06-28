@@ -35,6 +35,7 @@ echo Fremen order: $i
 done
 
 ../bin/fremen ../data/$dataset/ NH 0 $numdays $j|grep Precision >../results/$dataset/location_${perc}.txt
+../bin/fremen ../data/$dataset/ NN 0 $numdays $j|grep Precision >../results/$dataset/none_${perc}.txt
 
 done
 
