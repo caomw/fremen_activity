@@ -114,3 +114,4 @@ cat ../results/$d/fremen_0_confmat.txt |sed -n 7,1000p|awk '{print 1-$5}' >stati
 #echo 'digraph { rankdir=LR; A -> B [label="T-test indicates that \n A achieves lower error then B"];'
 
 create_graph $gmm_order $fremen_order $adaptive_order $((1440/$interval_order))|dot -Tpdf >$d.pdf
+create_graph $gmm_order $fremen_order $adaptive_order $((1440/$interval_order))|dot -Tpng >$d.png
